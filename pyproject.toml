@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+# Project metadata
+[project]
+name = "nyt_scraper"
+version = "0.0.1"
+requires-python = ">= 3.10"
+description = "A python app that collects data from the NYT API and summarizes it using LLMs"
+readme = "README.md"
+authors = [
+    {name = "Donovan Murray"}
+]
+
+[project.license]
+text = "MIT"
+
+dynamic = ["dependencies"]
+
+[tool.setuptools.dynamic]
+# Primary dependencies packages that this project directly needs to run
+dependencies = { file = ["requirements.in"] }
+
+
+[project.scripts]
+#FIXME: Update to include demo, dev, and prod scripts
+nyt_scraper = "app:main"
+
+[project.urls]
+repository = "https://github.com/DunnyBunny1/NYT_Scraper"
+
+classifiers = [
+  # How mature is this project? Common values are
+  #   3 - Alpha
+  #   4 - Beta
+  #   5 - Production/Stable
+  "Development Status :: 3 - Alpha",
+
+  # Whot this project is intended for
+  "Intended Audience :: Developers",
+  "Topic :: Software Development :: Build Tools",
+
+  # Software license
+  "License :: OSI Approved :: MIT License",
+
+  # Supported Python versions
+  "Programming Language :: Python :: 3.10",
+]

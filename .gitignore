@@ -1,4 +1,20 @@
+# Environment vars
 .env 
+# Virtual environments
 venv/
-__pycache__
+# Compiled code / interpreter caches
+__pycache__/
 *.pyc
+# Output / log output files 
+*.out
+*.txt
+*.log
+# IDE-specific data
+.idea/
+# Caches for different dev tools
+.ruff_cache/
+.pytest_cache/
+# Packaging tool files
+*.egg-info/
+*.egg
+
